@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: tahoma;
 }
+html,body {
+	height: 100%;
+}
 
 /* preset  */
 p {
@@ -75,6 +78,14 @@ blockquote:after {
 .header-sec {
 	background-color: #0078BA;
 	padding: 12px 0;
+}
+.header-sec.sticky {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	transition: 0.5s;
+	top: -100px;
+	transform: translateY(100px);
 }
 .header-sec .logo a img {
 	width: 155px;
@@ -334,6 +345,44 @@ blockquote:after {
 	color: #333;
 	letter-spacing: 1px;
 }
+.dots-wrapper {
+	text-align: center;
+	padding: 25px 0;
+}
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+
 /* review section end  */
 
 /* footer section start  */
@@ -397,6 +446,46 @@ blockquote:after {
 @media screen and (max-width: 1199px) {
 	.video-sec .video-item iframe {
 		width: 100%;
+	}
+}
+@media screen and (max-width: 991px) {
+	.header-sec .menu-bar {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	.header-sec .menu-bar button {
+		background: no-repeat;
+		border: none;
+		color: #fff;
+		font-size: 28px;
+		cursor: pointer;
+	}
+	.header-sec .mobile-ver {
+		position: absolute;
+		top: 100%;
+		max-height: 0;
+		overflow: hidden;
+		visibility: hidden;
+		transition: all 0.5s ease-in-out;
+	}
+	.header-sec .mobile-ver.block {
+		visibility: visible;
+		max-height: 50vh;
+	}
+	.header-sec .mobile-ver .menu {
+		background-color: #fff;
+	}
+	.header-sec .mobile-ver .menu ul li {
+		display: block;
+		border-bottom: 1px solid #333333;
+		margin-right: 0;
+	}
+	.header-sec .mobile-ver .menu ul li a {
+		color: #333333;
+		display: block;
+		padding: 10px;
 	}
 }
 @media screen and (max-width: 767px) {

@@ -21,9 +21,12 @@
 <body>
     
     <!-- header section start -->
-    <header class="header-sec">
+    <header class="header-sec" id="header">
         <div class="container">
-            <nav>
+            <nav class="p-relative">
+                <div class="menu-bar d-block d-lg-none" id="menu-bar">
+                    <button><i class="fas fa-bars"></i></button>
+                </div>
                 <div class="row mobile-row align-center">
                     <div class="col-2 col-lg-2 logo">
                         <!-- logo -->
@@ -31,7 +34,7 @@
                             <img src="images/logo.png" alt="logo">
                         </a>
                     </div>
-                    <div class="col-8 col-lg-7 d-none d-lg-block">
+                    <div class="col-12 col-lg-7 d-lg-block mobile-ver" id="menu">
                         <div class="menu">
                             <ul>
                                 <li><a href="#">Features</a></li>
@@ -379,16 +382,45 @@
 
     <!-- review section end  -->
     <div class="review-sec sec-padding">
-        <div class="title">
-            <h2>School Management Software Reviews</h2>
-        </div>
         <div class="container">
-            <div class="review-item">
-                <blockquote>We have been using Fekara for last 3 years. Things at Fekara have improved alot in last years. Handling School daily routines has become a matter of few clicks with fekara. We are pretty satisfied with i</blockquote>
-               <div class="autor">
-                    <h5>capterra.com</h5>
-                    <span>Pakistan</span>
-               </div>
+            <div class="title">
+                <h2>School Management Software Reviews</h2>
+            </div>
+            <div class="slider-wrapper">
+                <div class="slide fade">
+                    <div class="review-item">
+                        <blockquote>We have been using Fekara for last 3 years. Things at Fekara have improved alot in last years. Handling School daily routines has become a matter of few clicks with fekara. We are pretty satisfied with i</blockquote>
+                        <div class="autor">
+                            <h5>capterra.com</h5>
+                            <span>Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="review-item">
+                        <blockquote>
+                            Using Fekara for managaging School’s matters like, Attendance, Examination Reports etc is a tremendous experience. Wonderful SMS tool for keeping in touch with parents.</blockquote>
+                        <div class="autor">
+                            <h5>Decent Commerce and Science Academy</h5>
+                            <span>United States</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="review-item">
+                        <blockquote>Some of my clients of schools are using this product and they are pretty much satisfied about it.
+                        Its a web application and easy access for all the staff via the internet. </blockquote>
+                        <div class="autor">
+                            <h5>Al Madina Institute of Knowlege, (Baltimore, MD,</h5>
+                            <span>RAHEEM I</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dots-wrapper">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
             </div>
         </div>
     </div>
@@ -459,6 +491,8 @@
         </div>
     </footer>
     <!-- footer section end  -->
+    
 
+    <script src="js/custom.js"></script>
 </body>
 </html>
